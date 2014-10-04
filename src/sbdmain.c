@@ -16,9 +16,11 @@ int main ( int argc,
   AltkWidget *dlg;
   GMainLoop *loop;
   SbSim *sim;
+  SbBot *bot;
   CL_DEBUG("hello!");
   altk_init();
   sim = sb_sim_new();
+  bot = sb_bot_new(sim);
   display = altk_display_new();
   dlg = altk_dialog_new(display);
   altk_widget_show_all(dlg);
